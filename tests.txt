@@ -1,0 +1,6 @@
+./src/test/java/tests/EpicTest.java
+./src/test/java/tests/HistoryManagerTest.java
+./src/test/java/tests/ManagersTest.java
+./src/test/java/tests/SubtaskTest.java
+./src/test/java/tests/TaskManagerTest.java
+./src/test/java/tests/TaskTest.java
