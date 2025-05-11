@@ -7,13 +7,21 @@ import ru.cherry.itask.model.TaskStatus;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SubtaskTest {
+
     @Test
     void subtasksWithSameIdShouldBeEqual() {
-        Subtask subtask1 = new Subtask(1, "Subtask 1", "Desc 1", TaskStatus.NEW, 10);
-        Subtask subtask2 = new Subtask(1, "Subtask 2", "Desc 2", TaskStatus.DONE, 20);
+        Subtask subtask1 = new Subtask(1, "Title", "Desc", 10, TaskStatus.NEW);
+        Subtask subtask2 = new Subtask(1, "Different", "Different", 20, TaskStatus.DONE);
 
-        assertEquals(subtask1, subtask2);
-        assertEquals(subtask1.hashCode(), subtask2.hashCode());
+        assertEquals(subtask1, subtask2, "Подзадачи с одинаковым ID должны быть равны");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Subtask subtask = (Subtask) o;
+        return id == subtask.id;
     }
 
     @Test

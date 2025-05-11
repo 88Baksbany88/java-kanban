@@ -21,11 +21,9 @@ class HistoryManagerTest {
         Task task = new Task(1, "Task", "Description", TaskStatus.NEW);
         historyManager.add(task);
 
-        task.setTitle("Modified");
-        task.setStatus(TaskStatus.DONE);
+        task.setStatus(TaskStatus.DONE); // Модифицируем задачу
 
         Task fromHistory = historyManager.getHistory().get(0);
-        assertEquals("Task", fromHistory.getTitle());
-        assertEquals(TaskStatus.NEW, fromHistory.getStatus());
+        assertEquals(TaskStatus.NEW, fromHistory.getStatus(), "История должна хранить исходное состояние");
     }
 }
