@@ -1,8 +1,8 @@
-package ru.cherry.itask.model.model.manager;
+package ru.cherry.itask.model.manager;
 
-import ru.cherry.itask.model.model.Epic;
-import ru.cherry.itask.model.model.Subtask;
-import ru.cherry.itask.model.model.Task;
+import ru.cherry.itask.model.Epic;
+import ru.cherry.itask.model.Subtask;
+import ru.cherry.itask.model.Task;
 
 import java.util.List;
 

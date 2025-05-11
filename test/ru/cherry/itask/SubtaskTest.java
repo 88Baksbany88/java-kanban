@@ -1,8 +1,8 @@
 package ru.cherry.itask;
 
 import org.junit.jupiter.api.Test;
-import ru.cherry.itask.model.model.Subtask;
-import ru.cherry.itask.model.model.TaskStatus;
+import ru.cherry.itask.model.Subtask;
+import ru.cherry.itask.model.TaskStatus;
 
 import static org.junit.jupiter.api.Assertions.*;
 

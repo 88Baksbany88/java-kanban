@@ -1,7 +1,7 @@
 package ru.cherry.itask;
 
 import org.junit.jupiter.api.Test;
-import ru.cherry.itask.model.model.Epic;
+import ru.cherry.itask.model.Epic;
 
 import static org.junit.jupiter.api.Assertions.*;
 

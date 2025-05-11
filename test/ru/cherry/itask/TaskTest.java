@@ -2,10 +2,10 @@ package ru.cherry.itask;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.cherry.itask.model.model.Epic;
-import ru.cherry.itask.model.model.Subtask;
-import ru.cherry.itask.model.model.Task;
-import ru.cherry.itask.model.model.TaskStatus;
+import ru.cherry.itask.model.Epic;
+import ru.cherry.itask.model.Subtask;
+import ru.cherry.itask.model.Task;
+import ru.cherry.itask.model.TaskStatus;
 import ru.cherry.itask.model.manager.TaskManager;
 import ru.cherry.itask.model.manager.Managers;
 import static org.junit.jupiter.api.Assertions.*;

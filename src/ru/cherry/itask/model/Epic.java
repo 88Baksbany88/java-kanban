@@ -1,4 +1,4 @@
-package ru.cherry.itask.model.model;
+package ru.cherry.itask.model;
 
 import java.util.ArrayList;
 import java.util.List;

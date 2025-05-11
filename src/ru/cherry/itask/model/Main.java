@@ -1,8 +1,11 @@
-package ru.cherry.itask.model.model;
+package ru.cherry.itask.model;
+
+import ru.cherry.itask.model.manager.Managers;
+import ru.cherry.itask.model.manager.TaskManager;
 
 public class Main {
     public static void main(String[] args) {
-        ru.cherry.itask.model.model.manager.TaskManager manager = ru.cherry.itask.model.model.manager.Managers.getDefault();
+        TaskManager manager = Managers.getDefault();
 
         // Тестирование функционала
         Task task1 = manager.createTask(new Task(0, "Task 1", "Description 1", TaskStatus.NEW));
