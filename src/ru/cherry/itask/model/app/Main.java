@@ -1,7 +1,7 @@
-package app;
+package ru.cherry.itask.model.app;
 
-import manager.Managers;
-import manager.TaskManager;
+import ru.cherry.itask.model.manager.Managers;
+import ru.cherry.itask.model.manager.TaskManager;
 import model.*;
 
 public class Main {

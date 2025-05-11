@@ -1,4 +1,4 @@
-package model;
+package ru.cherry.itask.model.service;
 
 public enum TaskStatus {
     NEW,

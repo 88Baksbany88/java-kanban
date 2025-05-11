@@ -1,6 +1,6 @@
-package manager;
+package ru.cherry.itask.model.manager;
 
-import model.Task;
+import ru.cherry.itask.model.service.Task;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

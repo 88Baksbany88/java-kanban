@@ -1,4 +1,4 @@
-package manager;
+package ru.cherry.itask.model.manager;
 
 import model.*;
 import java.util.List;
