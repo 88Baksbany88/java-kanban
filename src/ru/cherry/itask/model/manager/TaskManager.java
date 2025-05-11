@@ -1,6 +1,9 @@
-package ru.cherry.itask.model.manager;
+package ru.cherry.itask.manager;
 
-import model.*;
+import ru.cherry.itask.model.model.Epic;
+import ru.cherry.itask.model.model.Subtask;
+import ru.cherry.itask.model.model.Task;
+
 import java.util.List;
 
 public interface TaskManager {

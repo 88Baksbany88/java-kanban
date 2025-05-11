@@ -1,4 +1,4 @@
-package ru.cherry.itask.model.service;
+package ru.cherry.itask.model.model;
 
 /**
  * Класс подзадачи (Subtask), наследуется от Task.

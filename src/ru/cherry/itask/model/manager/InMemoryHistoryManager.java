@@ -1,4 +1,4 @@
-package ru.cherry.itask.model.manager;
+package ru.cherry.itask.manager;
 
 import ru.cherry.itask.model.service.Task;
 import java.util.ArrayList;

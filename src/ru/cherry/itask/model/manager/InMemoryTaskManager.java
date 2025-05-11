@@ -1,6 +1,9 @@
-package ru.cherry.itask.model.manager;
+package ru.cherry.itask.manager;
 
-import model.*;
+import ru.cherry.itask.model.model.Epic;
+import ru.cherry.itask.model.model.Subtask;
+import ru.cherry.itask.model.model.Task;
+import ru.cherry.itask.model.model.TaskStatus;
 
 import java.util.ArrayList;
 import java.util.HashMap;
