@@ -6,7 +6,8 @@ import ru.cherry.itask.model.model.Epic;
 import ru.cherry.itask.model.model.Subtask;
 import ru.cherry.itask.model.model.Task;
 import ru.cherry.itask.model.model.TaskStatus;
-
+import ru.cherry.itask.model.manager.TaskManager;
+import ru.cherry.itask.model.manager.Managers;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TaskTest {

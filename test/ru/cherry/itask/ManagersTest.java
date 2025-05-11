@@ -1,6 +1,6 @@
 package ru.cherry.itask;
 
-import manager.*;
+import ru.cherry.itask.model.manager.Managers;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

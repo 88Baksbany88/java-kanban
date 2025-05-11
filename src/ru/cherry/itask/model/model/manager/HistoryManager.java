@@ -1,6 +1,6 @@
 package ru.cherry.itask.model.model.manager;
 
-import ru.cherry.itask.model.service.Task;
+import ru.cherry.itask.model.model.Task;
 import java.util.List;
 
 public interface HistoryManager {
