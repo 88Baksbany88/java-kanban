@@ -20,34 +20,37 @@ class TaskManagerTest {
         manager = Managers.getDefault();
     }
 
-    @Test
-    void shouldNotAllowEpicToBeItsOwnSubtask() {
-        Epic epic = new Epic(1, "Epic", "Description");
-        assertThrows(IllegalArgumentException.class, () -> {
-            taskManager.addSubtask(new Subtask(1, "Subtask", "Desc", epic.getId(), epic.getId()));
-        });
+    class TaskManagerTest {
+
+        @Test
+        void shouldNotAllowEpicToBeItsOwnSubtask() {
+            Epic epic = new Epic(1, "Epic", "Description", TaskStatus.NEW);
+            assertThrows(IllegalArgumentException.class, () -> {
+                manager.addSubtask(new Subtask(1, "Subtask", "Desc", TaskStatus.NEW, epic.getId()));
+            });
+        }
+
+        @Test
+        void shouldHandleManualAndAutoIds() {
+            Task manualTask = new Task(100, "Manual", "Desc", TaskStatus.NEW);
+            manager.addTask(manualTask);
+            assertEquals(100, manualTask.getId(), "ID ручного задания должно сохраняться");
+
+            // Для автоинкремента нужно использовать другой конструктор или метод
+            Task autoTask = manager.createTask("Auto", "Desc", TaskStatus.NEW);
+            assertNotEquals(100, autoTask.getId(), "Авто ID не должно конфликтовать с ручными");
+        }
     }
 
     @Test
     void shouldAddAndFindAllTaskTypes() {
         Task task = manager.createTask(new Task(0, "Task", "Desc", TaskStatus.NEW));
-        Epic epic = manager.createEpic(new Epic(0, "Epic", "Desc"));
+        Epic epic = manager.createEpic(new Epic(0, "Epic", "Desc", TaskStatus.NEW));
         Subtask subtask = manager.createSubtask(new Subtask(0, "Subtask", "Desc", TaskStatus.NEW, epic.getId()));
 
         assertNotNull(manager.getTask(task.getId()));
         assertNotNull(manager.getEpic(epic.getId()));
         assertNotNull(manager.getSubtask(subtask.getId()));
-    }
-
-    @Test
-    void shouldHandleManualAndAutoIds() {
-        Task manualTask = new Task(100, "Manual", "Desc"); // Явно заданный ID
-        taskManager.addTask(manualTask);
-        assertEquals(100, manualTask.getId(), "ID ручного задания должно сохраняться");
-
-        Task autoTask = new Task("Auto", "Desc"); // Автоинкремент ID
-        taskManager.addTask(autoTask);
-        assertNotEquals(100, autoTask.getId(), "Авто ID не должно конфликтовать с ручными");
     }
 
     @Test

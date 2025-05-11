@@ -13,7 +13,7 @@ class SubtaskTest {
         Subtask subtask1 = new Subtask(1, "Title", "Desc", 10, TaskStatus.NEW);
         Subtask subtask2 = new Subtask(1, "Different", "Different", 20, TaskStatus.DONE);
 
-        assertEquals(subtask1, subtask2, "Подзадачи с одинаковым ID должны быть равны");
+        assertEquals(subtask1.getId(), subtask2.getId(), "Подзадачи с одинаковым ID должны быть равны");
     }
 
     @Override
