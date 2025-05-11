@@ -1,4 +1,4 @@
-package ru.cherry.itask.manager;
+package ru.cherry.itask.model.model.manager;
 
 import ru.cherry.itask.model.model.Epic;
 import ru.cherry.itask.model.model.Subtask;

@@ -1,4 +1,4 @@
-package ru.cherry.itask.manager;
+package ru.cherry.itask.model.model.manager;
 
 public class Managers {
     public static TaskManager getDefault() {
