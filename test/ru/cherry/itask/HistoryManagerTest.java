@@ -1,11 +1,12 @@
 package ru.cherry.itask;
 
+import org.junit.jupiter.api.BeforeEach;
 import ru.cherry.itask.model.manager.HistoryManager;
 import ru.cherry.itask.model.manager.Managers;
 import ru.cherry.itask.model.Task;
 import ru.cherry.itask.model.TaskStatus;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class HistoryManagerTest {
     private HistoryManager historyManager;
