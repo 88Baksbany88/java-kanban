@@ -1,4 +1,4 @@
-package model;
+package ru.cherry.itask.model.model;
 
 import java.util.Objects;
 

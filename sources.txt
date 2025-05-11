@@ -1,0 +1,10 @@
+./src/main/java/app/Main.java
+./src/main/java/manager/HistoryManager.java
+./src/main/java/manager/InMemoryHistoryManager.java
+./src/main/java/manager/InMemoryTaskManager.java
+./src/main/java/manager/Managers.java
+./src/main/java/manager/TaskManager.java
+./src/main/java/model/Epic.java
+./src/main/java/model/Subtask.java
+./src/main/java/model/Task.java
+./src/main/java/model/TaskStatus.java
