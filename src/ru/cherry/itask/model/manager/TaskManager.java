@@ -53,9 +53,4 @@ public interface TaskManager {
     void addTask(Task manualTask);
 
     Task createTask(String auto, String desc, TaskStatus taskStatus);
-
-    @BeforeEach
-    void setUp() {
-        manager = Managers.getDefault();
-    }
 }
