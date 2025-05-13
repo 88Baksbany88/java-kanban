@@ -1,9 +1,9 @@
-package ru.cherry.itask.model.model.manager;
+package ru.cherry.itask.model.manager;
 
-import ru.cherry.itask.model.model.Epic;
-import ru.cherry.itask.model.model.Subtask;
-import ru.cherry.itask.model.model.Task;
-import ru.cherry.itask.model.model.TaskStatus;
+import ru.cherry.itask.model.Epic;
+import ru.cherry.itask.model.Subtask;
+import ru.cherry.itask.model.Task;
+import ru.cherry.itask.model.TaskStatus;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,6 +20,29 @@ public class InMemoryTaskManager implements TaskManager {
     @Override
     public List<Task> getAllTasks() {
         return new ArrayList<>(tasks.values());
+    }
+
+    @Override
+    public Task createTask(String auto, String desc, TaskStatus taskStatus) {
+        Task newTask = new Task(auto, desc, taskStatus);
+        tasks.put(newTask.getId(), newTask);
+        return newTask;
+    }
+
+    @Override
+    public void addTask(Task task) {
+        if (task != null && !tasks.containsKey(task.getId())) {
+            tasks.put(task.getId(), task);
+        }
+    }
+
+    @Override
+    public void addSubtask(Subtask subtask) {
+        if (subtask != null && epics.containsKey(subtask.getEpicId())) {
+            subtasks.put(subtask.getId(), subtask);
+            epics.get(subtask.getEpicId()).getSubtaskIds().add(subtask.getId());
+            updateEpicStatus(subtask.getEpicId());
+        }
     }
 
     @Override

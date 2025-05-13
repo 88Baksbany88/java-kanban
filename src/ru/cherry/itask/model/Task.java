@@ -1,4 +1,4 @@
-package ru.cherry.itask.model.model;
+package ru.cherry.itask.model;
 
 import java.util.Objects;
 
@@ -13,6 +13,9 @@ public class Task {
         this.title = title;
         this.description = description;
         this.status = status;
+    }
+
+    public Task(String auto, String desc, TaskStatus taskStatus) {
     }
 
     public int getId() {

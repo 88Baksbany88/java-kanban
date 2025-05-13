@@ -1,8 +1,9 @@
-package ru.cherry.itask.model.model.manager;
+package ru.cherry.itask.model.manager;
 
-import ru.cherry.itask.model.model.Epic;
-import ru.cherry.itask.model.model.Subtask;
-import ru.cherry.itask.model.model.Task;
+import ru.cherry.itask.model.Epic;
+import ru.cherry.itask.model.Subtask;
+import ru.cherry.itask.model.Task;
+import ru.cherry.itask.model.TaskStatus;
 
 import java.util.List;
 
@@ -46,4 +47,10 @@ public interface TaskManager {
     List<Subtask> getEpicSubtasks(int epicId);
 
     List<Task> getHistory();
+
+    void addSubtask(Subtask subtask);
+
+    void addTask(Task manualTask);
+
+    Task createTask(String auto, String desc, TaskStatus taskStatus);
 }

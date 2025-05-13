@@ -1,14 +1,17 @@
-package ru.cherry.itask.model.model;
+package ru.cherry.itask.model;
+
+import ru.cherry.itask.model.manager.Managers;
+import ru.cherry.itask.model.manager.TaskManager;
 
 public class Main {
     public static void main(String[] args) {
-        ru.cherry.itask.model.model.manager.TaskManager manager = ru.cherry.itask.model.model.manager.Managers.getDefault();
+        TaskManager manager = Managers.getDefault();
 
         // Тестирование функционала
         Task task1 = manager.createTask(new Task(0, "Task 1", "Description 1", TaskStatus.NEW));
         Task task2 = manager.createTask(new Task(0, "Task 2", "Description 2", TaskStatus.IN_PROGRESS));
 
-        Epic epic1 = manager.createEpic(new Epic(0, "Epic 1", "Epic description"));
+        Epic epic1 = manager.createEpic(new Epic(0, "Epic 1", "Epic description", TaskStatus.NEW));
         Subtask subtask1 = manager.createSubtask(new Subtask(0, "Subtask 1", "Desc", TaskStatus.NEW, epic1.getId()));
         Subtask subtask2 = manager.createSubtask(new Subtask(0, "Subtask 2", "Desc", TaskStatus.NEW, epic1.getId()));
 
