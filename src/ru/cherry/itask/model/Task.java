@@ -15,6 +15,9 @@ public class Task {
         this.status = status;
     }
 
+    public Task(String auto, String desc, TaskStatus taskStatus) {
+    }
+
     public int getId() {
         return id;
     }

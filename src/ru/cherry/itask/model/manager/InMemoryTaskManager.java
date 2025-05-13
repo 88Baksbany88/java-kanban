@@ -23,6 +23,13 @@ public class InMemoryTaskManager implements TaskManager {
     }
 
     @Override
+    public Task createTask(String auto, String desc, TaskStatus taskStatus) {
+        Task newTask = new Task(auto, desc, taskStatus);
+        tasks.put(newTask.getId(), newTask);
+        return newTask;
+    }
+
+    @Override
     public void deleteAllTasks() {
         for (Integer taskId : tasks.keySet()) {
             historyManager.remove(taskId);
